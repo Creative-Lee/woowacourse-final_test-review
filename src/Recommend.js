@@ -62,6 +62,12 @@ class Recommend {
 
         const recommendedMenu = targetMenus[randomNum - 1];
 
+        console.log('targetMenuIdxArr: ', targetMenuIdxArr);
+        console.log('randomNum: ', randomNum);
+        console.log('targetMenus: ', targetMenus);
+        console.log('recommendedMenu: ', recommendedMenu);
+        console.log('idx: ', idx);
+
         if (antiFoodArr.includes(recommendedMenu)) continue;
         if (this.#menus[idx] && this.#menus[idx].includes(recommendedMenu)) continue;
 
