@@ -57,10 +57,10 @@ class Recommend {
 
         const targetMenus = MENUS[latestCategory].split(', ');
 
-        const targetMenuIdxArr = targetMenus.map((_, idx) => idx);
+        const targetMenuIdxArr = targetMenus.map((_, idx) => idx + 1);
         const randomNum = Random.shuffle(targetMenuIdxArr)[0];
 
-        const recommendedMenu = targetMenus[randomNum];
+        const recommendedMenu = targetMenus[randomNum - 1];
 
         if (antiFoodArr.includes(recommendedMenu)) continue;
         if (this.#menus[idx] && this.#menus[idx].includes(recommendedMenu)) continue;
