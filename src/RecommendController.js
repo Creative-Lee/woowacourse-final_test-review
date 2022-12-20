@@ -73,7 +73,10 @@ class RecommendController {
     this.#recommend.recommendMenu();
 
     const recommendedMenuCount = this.#recommend.getMenus()[0].length;
-    console.log(this.#recommend.getMenus()[0]);
+    console.log(this.#recommend.getCategories());
+    console.log('구구 메뉴: ', this.#recommend.getMenus()[0]);
+    console.log('제임스 메뉴: ', this.#recommend.getMenus()[1]);
+    console.log('recommendedMenuCount: ', recommendedMenuCount);
     if (recommendedMenuCount < 5) {
       this.#recommendCategoryPhase();
       return;

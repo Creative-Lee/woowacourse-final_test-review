@@ -57,40 +57,40 @@ describe('점심 메뉴 테스트', () => {
 
       const sequenced = (_, idx) => idx + 1;
       mockShuffles([
-        // // 구구
-        // [2, Array.from({ length: 9 }, sequenced)],
-        // [7, Array.from({ length: 9 }, sequenced)],
-        // [1, Array.from({ length: 9 }, sequenced)],
-        // [4, Array.from({ length: 9 }, sequenced)],
-        // [2, Array.from({ length: 9 }, sequenced)],
+        // 구구
+        [2, Array.from({ length: 9 }, sequenced)], //구구   쌈밥
+        [7, Array.from({ length: 9 }, sequenced)], //제임스 떡볶이 거부.
+        [1, Array.from({ length: 9 }, sequenced)], //제임스 김치찌개
+        [4, Array.from({ length: 9 }, sequenced)], //구구 쌈밥, 프렌치 토스트
+        [2, Array.from({ length: 9 }, sequenced)], //제임스 김치찌개, 뇨끼
 
-        // //제임스
+        //제임스
+        [9, Array.from({ length: 9 }, sequenced)], //구구 쌈밥, 프렌치 토스트, undefined
+        [1, Array.from({ length: 9 }, sequenced)], //제임스 김치찌개, 뇨끼 , 우동
+        [5, Array.from({ length: 9 }, sequenced)], //구구 쌈밥, 프렌치 토스트, undefined, 마파두부
+        [5, Array.from({ length: 9 }, sequenced)], //제임스 김치찌개, 뇨끼 , 우동, 마파두부
+        [4, Array.from({ length: 9 }, sequenced)], //구구 쌈밥, 프렌치 토스트, undefined, 마파두부, 쌀국수
+        //제임스의 마지막 메뉴 추천에서 셔플 목 함수 리턴 값 undefined...
+        // // 구구 1
+        // [2, Array.from({ length: 9 }, sequenced)],
+        // //제임스 1
         // [9, Array.from({ length: 9 }, sequenced)],
+        // // 구구 2
+        // [7, Array.from({ length: 9 }, sequenced)],
+        // //제임스 2
         // [1, Array.from({ length: 9 }, sequenced)],
+        // // 구구 3
+        // [1, Array.from({ length: 9 }, sequenced)],
+        // //제임스 3
         // [5, Array.from({ length: 9 }, sequenced)],
-        // [5, Array.from({ length: 9 }, sequenced)],
+        // // 구구 4
         // [4, Array.from({ length: 9 }, sequenced)],
-
-        // 구구 1
-        [2, Array.from({ length: 9 }, sequenced)],
-        //제임스 1
-        [9, Array.from({ length: 9 }, sequenced)],
-        // 구구 2
-        [7, Array.from({ length: 9 }, sequenced)],
-        //제임스 2
-        [1, Array.from({ length: 9 }, sequenced)],
-        // 구구 3
-        [1, Array.from({ length: 9 }, sequenced)],
-        //제임스 3
-        [5, Array.from({ length: 9 }, sequenced)],
-        // 구구 4
-        [4, Array.from({ length: 9 }, sequenced)],
-        //제임스 4
-        [5, Array.from({ length: 9 }, sequenced)],
-        // 구구 5
-        [2, Array.from({ length: 9 }, sequenced)],
-        //제임스 5
-        [4, Array.from({ length: 9 }, sequenced)],
+        // //제임스 4
+        // [5, Array.from({ length: 9 }, sequenced)],
+        // // 구구 5
+        // [2, Array.from({ length: 9 }, sequenced)],
+        // //제임스 5
+        // [4, Array.from({ length: 9 }, sequenced)],
       ]);
 
       const app = new App();
